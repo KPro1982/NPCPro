@@ -40,31 +40,26 @@ modded class MissionGameplay
 	
 	void BuildOptionSet()
 	{
-		KPPlayerData data = KPPlayerData("123", 1, 2);
+		KPPlayerData data = KPPlayerData("123", 1, 1);
 		
-		int p;
-
+		KPResponse resp = new KPResponse("Gimme some water", "giveitem", "waterbottle, 1");
 		
 		KPOptionSet k_options = new KPOptionSet;
 				
-		KPOption option1 = new KPDialog("hello");
-		KPOption option2 = new KPDialog("world");
-		option1.SetCondition(new KPConditionEquals(data, "reputation", 1));		
-		option2.SetCondition(new KPConditionEquals(data,"reputation", 2));
+		KPOption option1 = new KPDialog("I need water.", new KPNullCondition);
+		KPOption option2 = new KPDialog("I need food", new KPConditionLessThan(data,"rank", 4));
+		KPOption option3 = new KPDialog("I need a splint", new KPConditionLessThan(data,"rank", 4));
 
+		
 		k_options.AddOption(option1);
 		k_options.AddOption(option2);
+		k_options.AddOption(option3);
 		
-		
-		
-		KPDialog k_dialog;
-		if(KPDialog.CastTo(k_dialog, k_options.GetFirstMatch()))
-		{
-			Print(k_dialog.m_text);
-		} else {
-			Print("No match!")
-		}
-		
+				
+		//k_options.PrintAllMatches();
+		KPOption result = k_options.GetRandomMatch();
+		Print("Random:");
+		result.PrintOption();		
 	
 	
 	}

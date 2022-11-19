@@ -1,9 +1,9 @@
 class KPOption
 {
 
-	ref KPCondition m_condition;
+	ref KPConditionBase m_condition;
 	
-	void SetCondition(KPCondition cond)
+	void SetCondition(KPConditionBase cond)
 	{
 		m_condition = cond;
 	
@@ -13,4 +13,10 @@ class KPOption
 	{
 		return m_condition.SatisfiesCondition();
 	}
+	
+	void PrintOption()
+	{
+		
+	}
+
 }
