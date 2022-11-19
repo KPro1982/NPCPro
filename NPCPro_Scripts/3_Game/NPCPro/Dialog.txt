@@ -1,0 +1,6 @@
+class Dialog extends Option
+{
+
+
+
+}

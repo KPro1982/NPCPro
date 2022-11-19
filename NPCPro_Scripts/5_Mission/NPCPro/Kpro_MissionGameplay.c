@@ -2,7 +2,10 @@ modded class MissionGameplay
 {   
 // This runs on the client
 
-		override void OnMissionStart()
+	
+	
+	
+	override void OnMissionStart()
 	{
 		super.OnMissionStart();
 		NPC_GetKlient();
@@ -25,14 +28,43 @@ modded class MissionGameplay
 		super.OnUpdate(timeslice);		
 		if ( GetGame().GetInput().LocalPress("SSActionName") && GetGame().GetUIManager().GetMenu() == NULL ) 
 		{				
-			Print(string.Format("Key pressed!"));
-
+			Print(string.Format("Building OptionSet!"));
+			BuildOptionSet();
 
 							
 								
 		}
 			
 	}
+	
+	
+	void BuildOptionSet()
+	{
+		KPPlayerData data = KPPlayerData("123", 1, 1);
+		
+		KPResponse resp = new KPResponse("Gimme some water", "giveitem", "waterbottle, 1");
+		
+		KPOptionSet k_options = new KPOptionSet;
+				
+		KPOption option1 = new KPDialog("I need water.", new KPNullCondition);
+		KPOption option2 = new KPDialog("I need food", new KPConditionLessThan(data,"rank", 4));
+		KPOption option3 = new KPDialog("I need a splint", new KPConditionLessThan(data,"rank", 4));
+
+		
+		k_options.AddOption(option1);
+		k_options.AddOption(option2);
+		k_options.AddOption(option3);
+		
+				
+		//k_options.PrintAllMatches();
+		KPOption result = k_options.GetRandomMatch();
+		Print("Random:");
+		result.PrintOption();		
+	
+	
+	}
+	
+	
 	
 	
 	
