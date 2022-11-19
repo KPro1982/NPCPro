@@ -1,17 +1,24 @@
 class KPConditionEquals extends KPCondition
 {
-	int m_rank;
+	int m_comparator;
 	
-	void KPConditionEquals(KPPlayerData data, int rank)
+	void KPConditionEquals(KPPlayerData data, string kpfield, int comparator)
 	{
-		m_rank = rank;
+		m_comparator = comparator;
+		m_field = kpfield;
 		m_data = data;
 	}
 
 	override bool SatisfiesCondition()
 	{
-		if(m_data.m_rank == m_rank)
+		
+		int intRank ;
+		m_data.GetField(m_field, intRank);
+		if(m_comparator == intRank)
+		{
 			return true;
+		}
+	
 		
 		return false;
 	}

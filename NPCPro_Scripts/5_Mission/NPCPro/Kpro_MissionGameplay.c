@@ -40,16 +40,22 @@ modded class MissionGameplay
 	
 	void BuildOptionSet()
 	{
-		KPPlayerData data = KPPlayerData("123", 1, 1);
+		KPPlayerData data = KPPlayerData("123", 1, 2);
+		
+		int p;
+
+		
 		KPOptionSet k_options = new KPOptionSet;
 				
 		KPOption option1 = new KPDialog("hello");
 		KPOption option2 = new KPDialog("world");
-		option1.SetCondition(new KPConditionEquals(data,1));		
-		option2.SetCondition(new KPConditionEquals(data,2));
+		option1.SetCondition(new KPConditionEquals(data, "reputation", 1));		
+		option2.SetCondition(new KPConditionEquals(data,"reputation", 2));
 
 		k_options.AddOption(option1);
 		k_options.AddOption(option2);
+		
+		
 		
 		KPDialog k_dialog;
 		if(KPDialog.CastTo(k_dialog, k_options.GetFirstMatch()))
