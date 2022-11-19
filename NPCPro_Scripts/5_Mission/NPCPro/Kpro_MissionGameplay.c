@@ -2,7 +2,10 @@ modded class MissionGameplay
 {   
 // This runs on the client
 
-		override void OnMissionStart()
+	
+	
+	
+	override void OnMissionStart()
 	{
 		super.OnMissionStart();
 		NPC_GetKlient();
@@ -25,14 +28,34 @@ modded class MissionGameplay
 		super.OnUpdate(timeslice);		
 		if ( GetGame().GetInput().LocalPress("SSActionName") && GetGame().GetUIManager().GetMenu() == NULL ) 
 		{				
-			Print(string.Format("Key pressed!"));
-
+			Print(string.Format("Building OptionSet!"));
+			BuildOptionSet();
 
 							
 								
 		}
 			
 	}
+	
+	
+	void BuildOptionSet()
+	{
+		KPPlayerData data = KPPlayerData("123", 1, 2);
+		KPOptionSet k_options = new KPOptionSet;
+				
+		KPOption option1 = new KPOption;
+		KPOption option2 = new KPOption;
+		option1.SetCondition(new KPCondition(data));		
+		option2.SetCondition(new KPCondition(data));
+
+		k_options.AddOption(option1);
+		k_options.AddOption(option2);
+		
+		Print(k_options.GetFirstMatch());
+	
+	}
+	
+	
 	
 	
 	

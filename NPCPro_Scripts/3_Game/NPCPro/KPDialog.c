@@ -1,0 +1,6 @@
+class KPDialog extends KPOption
+{
+
+
+
+}

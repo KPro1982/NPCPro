@@ -1,0 +1,6 @@
+class KPConditionEquals extends KPCondition
+{
+
+
+
+}
