@@ -5,9 +5,14 @@ GameProjectClass {
 		GameProjectConfigClass PC {
 			platformHardware PC
 			skeletonDefinitions "DZ/Anims/cfg/skeletons.anim.xml"
-			FileSystem {
-
-			}
+			FileSystemPathClass {
+				Name "Game Root"
+				Directory "P:"
+				}	
+			FileSystemPathClass {
+				Name "NPCPro"
+				Directory "P:\NPCPro"
+				}
 			
 			imageSets {
 				"gui/imagesets/ccgui_enforce.imageset"

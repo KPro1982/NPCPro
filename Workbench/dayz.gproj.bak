@@ -5,9 +5,14 @@ GameProjectClass {
 		GameProjectConfigClass PC {
 			platformHardware PC
 			skeletonDefinitions "DZ/Anims/cfg/skeletons.anim.xml"
-			FileSystem {
-
-			}
+			FileSystemPathClass {
+				Name "Game Root"
+				Directory "P:"
+				}	
+			FileSystemPathClass {
+				Name "NPCPro"
+				Directory "P:\NPCPro"
+				}
 			
 			imageSets {
 				"gui/imagesets/ccgui_enforce.imageset"
@@ -36,8 +41,8 @@ GameProjectClass {
 				ScriptModulePathClass {
 					Name "core"
 					Paths {
-						"NPCPro_scripts/1_Core"
-						"NPCPro/scripts/1_Core"
+						"scripts/1_Core"
+	
 					}
 					EntryPoint ""
 				}
@@ -52,7 +57,7 @@ GameProjectClass {
 					Name "game"
 					Paths {
 						"scripts/3_Game"
-						"NPCPro/Scripts/3_Game"
+						"NPCPro/NPCPro_Scripts/3_Game"
 					}
 					EntryPoint "CreateGame"
 				}
@@ -60,7 +65,7 @@ GameProjectClass {
 					Name "world"
 					Paths {
 						"scripts/4_World"
-						"NPCPro/scripts/4_World"
+						"NPCPro/NPCPro_Scripts/4_World"
 					}
 					EntryPoint ""
 				}
@@ -68,7 +73,7 @@ GameProjectClass {
 					Name "mission"
 					Paths {
 						"scripts/5_Mission"
-						"NPCPro/scripts/5_Mission"
+						"NPCPro/NPCPro_Scripts/5_Mission"
 					}
 					EntryPoint "CreateMission"
 				}
@@ -78,7 +83,7 @@ GameProjectClass {
 					Paths {
 						"scripts/editor/Workbench"
 						"scripts/editor/plugins"
-						"NPCPro/scripts/editor/plugins"
+						"NPCPro/NPCPro_Scripts/editor/plugins"
 					} 
 					EntryPoint ""
 				} 

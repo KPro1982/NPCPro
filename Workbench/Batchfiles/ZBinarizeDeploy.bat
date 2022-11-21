@@ -7,6 +7,9 @@ set batchDirectory=%cd%
 set /a failed=0
 
 
+
+
+
 set /a compression=0
 
 if exist ../project.cfg (
@@ -198,5 +201,6 @@ for /R %%D in ( config.cpp ) do (
 goto end
 
 :end
+pause ZBinarizeDeploy
 exit /b 0
 endlocal

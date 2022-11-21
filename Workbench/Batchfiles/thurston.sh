@@ -70,7 +70,7 @@ declare -a secondlevelarr=(
 	"Objects_Structures_Editor"
 	"Objects_Structures_Flags"
 	"Objects_Structures_Grass"
-	"Objects_Structures_GraNPC_Sample"
+	"Objects_Structures_Grass_Sample"
 	"Objects_Structures_IvyAutomn"
 	"Objects_Structures_Props"
 	"Objects_Structures_Signs"

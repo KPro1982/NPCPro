@@ -22,7 +22,7 @@ class CfgMods
 		versionPath = "NPCPro/NPCPro_Scripts/Data/Version.hpp";
 		type = "mod";
 		
-		 inputs="NPCPro\NPCPro_Scripts\data\inputs.xml";
+		 // inputs="NPCPro\NPCPro_Scripts\data\inputs.xml";
 		
 		dependencies[] =
 		{
@@ -38,7 +38,7 @@ class CfgMods
 				value = "";
 				files[] =
 				{
-					"scripts/1_core"
+					"scripts/1_core",
 					"NPCPro/NPCPro_Scripts/common",
 					"NPCPro/NPCPro_Scripts/1_core"
 				};
@@ -49,7 +49,7 @@ class CfgMods
 				value="";
 				files[] = 
 				{
-					"scripts/3_Game"
+					"scripts/3_Game",
 					"NPCPro/NPCPro_Scripts/common",
 					"NPCPro/NPCPro_Scripts/3_Game"
 				};
@@ -59,7 +59,7 @@ class CfgMods
 				value="";
 				files[] = 
 				{
-					"scripts/4_World"
+					"scripts/4_World",
 					"NPCPro/NPCPro_Scripts/common",
 					"NPCPro/NPCPro_Scripts/4_World"
 				};
@@ -70,7 +70,7 @@ class CfgMods
 				value="";
 				files[] = 
 				{
-					"scripts/5_Mission"
+					"scripts/5_Mission",
 					"NPCPro/NPCPro_Scripts/common",
 					"NPCPro/NPCPro_Scripts/5_Mission"
 				};

@@ -1,3 +1,3 @@
 cd S:\Steam\steamapps\common\DayZ
 
-start DayZ_x64.exe "-mod=@NPCPro;@CF;@Community-Online-Tools;@Code Lock" -dologs -adminlog -freezecheck "-scriptDebug=true" -connect=127.0.0.1:2302
+start DayZ_x64.exe "-mod=@LogPlayerPosition;@CF;@Community-Online-Tools;@Code Lock" -dologs -adminlog -freezecheck "-scriptDebug=true" -connect=127.0.0.1:2302
